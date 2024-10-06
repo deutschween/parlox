@@ -8,6 +8,8 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -15,10 +17,30 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .logo {
-      margin: 20px;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ccc;
     }
 
     .hero {
@@ -28,11 +50,34 @@
       justify-content: center;
       align-items: center;
       color: #fff;
+      text-align: center;
+      padding: 20px;
     }
 
     .hero h1 {
       font-size: 48px;
       margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .hero button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .hero button:hover {
+      background-color: #3e8e41;
     }
 
     .signup-form {
@@ -40,15 +85,19 @@
       padding: 40px;
       border: 1px solid #ddd;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
     }
 
     .signup-form h2 {
       margin-top: 0;
+      font-size: 24px;
+      font-weight: bold;
     }
 
     label {
       display: block;
       margin-bottom: 10px;
+      font-size: 18px;
     }
 
     input[type="text"], input[type="email"], input[type="password"] {
@@ -56,18 +105,21 @@
       padding: 10px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
+      font-size: 18px;
     }
 
-    .btn-signup, .btn-submit {
+    .btn-submit {
       background-color: #4CAF50;
       color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    .btn-signup:hover, .btn-submit:hover {
+    .btn-submit:hover {
       background-color: #3e8e41;
     }
 
@@ -77,6 +129,7 @@
       padding: 20px;
       text-align: center;
       clear: both;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     footer ul {
@@ -110,47 +163,15 @@
         <li><a href="#">Community</a></li>
       </ul>
     </nav>
-    <div class="logo">
-      <img src="logo.png" alt="Roblox Logo">
-    </div>
   </header>
 
   <section class="hero">
     <div class="container">
       <h1>Join the Fun!</h1>
       <p>Create your account and start playing with millions of players worldwide!</p>
-      <button class="btn-signup">Sign Up</button>
+      <button class="btn-signup" id="signup-btn">Sign Up</button>
     </div>
   </section>
 
-  <section class="signup-form">
-    <div class="container">
-      <h2>Create Your Account</h2>
-      <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-
-        <button class="btn-submit">Create Account</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Parlox.Online. All rights reserved.</p>
-    <ul>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Help</a></li>
-    </ul>
-  </footer>
-</body>
-</html>
+  <section class="signup-form" id="signup-form">
+    <div class="container
